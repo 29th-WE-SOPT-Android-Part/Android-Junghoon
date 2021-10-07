@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/96jos/AndroidStudioProjects/Android-Junghoon/SoptAssignment1/app/src/main/res/layout/activity_home.xml" value="0.5536458333333333" />
+        <entry key="..\:/Users/96jos/AndroidStudioProjects/SoptAssignment1/app/src/main/res/drawable/box_border.xml" value="0.3463541666666667" />
+        <entry key="..\:/Users/96jos/AndroidStudioProjects/SoptAssignment1/app/src/main/res/layout/activity_home.xml" value="0.5536458333333333" />
+        <entry key="..\:/Users/96jos/AndroidStudioProjects/SoptAssignment1/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/96jos/AndroidStudioProjects/SoptAssignment1/app/src/main/res/layout/activity_sign_up.xml" value="0.41116751269035534" />
+        <entry key="..\:/Users/96jos/AndroidStudioProjects/SoptAssignment1/app/src/main/res/layout/activity_signin.xml" value="0.4438405797101449" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

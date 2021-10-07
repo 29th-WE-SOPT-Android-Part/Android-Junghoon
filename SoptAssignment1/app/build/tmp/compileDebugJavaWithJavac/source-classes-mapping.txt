@@ -1,8 +1,0 @@
-com/example/soptassignment1/databinding/ActivitySigninBinding.java
- com.example.soptassignment1.databinding.ActivitySigninBinding
-com/example/soptassignment1/BuildConfig.java
- com.example.soptassignment1.BuildConfig
-com/example/soptassignment1/databinding/ActivitySignUpBinding.java
- com.example.soptassignment1.databinding.ActivitySignUpBinding
-com/example/soptassignment1/databinding/ActivityHomeBinding.java
- com.example.soptassignment1.databinding.ActivityHomeBinding
