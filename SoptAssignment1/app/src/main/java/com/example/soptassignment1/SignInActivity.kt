@@ -28,7 +28,7 @@ class SignInActivity : AppCompatActivity() {
 
         // 홈 뷰로 이동
         binding.btnLogin.setOnClickListener {
-            if(binding.etID.text.isNullOrBlank() && binding.etPassword.text.isNullOrBlank()) {
+            if(binding.etID.text.isNullOrBlank() || binding.etPassword.text.isNullOrBlank()) {
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
             }
             else {
