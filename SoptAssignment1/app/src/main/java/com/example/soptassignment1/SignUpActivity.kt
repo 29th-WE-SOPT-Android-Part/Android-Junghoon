@@ -20,10 +20,10 @@ class SignUpActivity : AppCompatActivity() {
             if(binding.etName.text.isNullOrBlank() || binding.etID.text.isNullOrBlank() || binding.etPassword.text.isNullOrBlank())
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_SHORT).show()
             else {
-                val intent = Intent(this, SignInActivity::class.java)
-                intent.putExtra("ID", binding.etID.text.toString())
-                intent.putExtra("password", binding.etPassword.text.toString())
-                setResult(RESULT_OK, intent)
+           setResult(RESULT_OK, Intent(this, SignInActivity::class.java).apply {
+                      putExtra("ID", binding.etID.text.toString())
+                      putExtra("password", binding.etPassword.text.toString())
+           })
                 finish()
             }
         }
