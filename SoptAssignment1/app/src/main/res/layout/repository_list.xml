@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/repository_padding">
+
+    <ImageView
+        android:id="@+id/iv_repo_image"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/storage" />
+
+    <TextView
+        android:id="@+id/tv_repository_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_repo_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_repo_image"
+        tools:text="레포지토리" />
+
+    <TextView
+        android:id="@+id/tv_repository_introduce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10dp"
+        android:ellipsize="end"
+        android:maxLength="10"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@+id/tv_repository_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_repository_name"
+        tools:text="소개" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,6 @@
 package com.example.soptassignment1
 
-class UserData {
-}
+data class UserData (
+    val name : String,
+    val introduction : String
+)
