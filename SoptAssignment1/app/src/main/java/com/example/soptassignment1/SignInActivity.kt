@@ -39,7 +39,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         // 회원가입 뷰로 이동
-        binding.btnSignup.setOnClickListener {
+        binding.tvSignup2.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             getLoginText.launch(intent)
         }

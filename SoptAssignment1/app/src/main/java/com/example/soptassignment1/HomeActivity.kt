@@ -17,7 +17,6 @@ class HomeActivity : AppCompatActivity() {
         initTransactionEvent()
 
         setContentView(binding.root)
-        buttonGithub()
     }
 
     private fun initTransactionEvent() {
@@ -28,14 +27,6 @@ class HomeActivity : AppCompatActivity() {
 
         buttonFollower(fragmentFollower)
         buttonRepository(fragmentRepository)
-    }
-
-    // 깃허브로 이동
-    private fun buttonGithub() {
-        binding.btnGithub.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/shb03323"))
-            startActivity(intent)
-        }
     }
 
     // 팔로워 fragment
