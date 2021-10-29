@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/iv_profile"
-        android:layout_width="100dp"
+        android:layout_width="49dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
@@ -20,9 +20,11 @@
         android:id="@+id/tv_profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:layout_marginStart="22dp"
+        android:textSize="16sp"
+        android:textColor="@color/gray1"
+        android:fontFamily="@font/noto"
+        android:textFontWeight="700"
         app:layout_constraintStart_toEndOf="@+id/iv_profile"
         app:layout_constraintTop_toTopOf="@+id/iv_profile"
         tools:text="이름"/>
@@ -31,10 +33,12 @@
         android:id="@+id/tv_profile_introduce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="14dp"
+        android:textSize="@dimen/login_text_size"
+        android:textColor="@color/gray1"
+        android:fontFamily="@font/noto"
+        android:textFontWeight="400"
         app:layout_constraintStart_toStartOf="@+id/tv_profile_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profile_name"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
         tools:text="소개" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
