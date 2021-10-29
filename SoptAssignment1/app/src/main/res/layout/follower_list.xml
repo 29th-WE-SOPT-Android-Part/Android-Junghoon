@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="@dimen/follower_padding">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/iv_profile"
         android:layout_width="49dp"
         android:layout_height="0dp"
+        android:layout_marginStart="@dimen/follower_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,5 +40,15 @@
         app:layout_constraintStart_toStartOf="@+id/tv_profile_name"
         app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
         tools:text="소개" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDE2E5"
+        android:layout_marginTop="@dimen/follower_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
