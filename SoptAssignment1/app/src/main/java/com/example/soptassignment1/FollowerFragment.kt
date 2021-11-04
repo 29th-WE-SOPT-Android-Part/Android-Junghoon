@@ -1,11 +1,15 @@
 package com.example.soptassignment1
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.soptassignment1.databinding.FragmentFollowerBinding
+
 
 class FollowerFragment : Fragment() {
     private lateinit var followerAdapter: FollowerAdapter
@@ -28,10 +32,10 @@ class FollowerFragment : Fragment() {
 
         followerAdapter.userList.addAll(
             listOf(
+                UserData("최유림", "안드로이드 YB"),
                 UserData("이창환", "안드로이드 YB"),
                 UserData("이호재", "안드로이드 YB"),
                 UserData("문다빈", "안드로이드 대장"),
-                UserData("최유림", "안드로이드 YB"),
                 UserData("이강민", "안드로이드 OB"),
                 UserData("오예원", "서버 OB"),
                 UserData("김송현", "운영팀장")

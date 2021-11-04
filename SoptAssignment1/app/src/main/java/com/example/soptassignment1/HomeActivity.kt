@@ -1,58 +1,61 @@
 package com.example.soptassignment1
 
-import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.viewpager2.widget.ViewPager2
 import com.example.soptassignment1.databinding.ActivityHomeBinding
-import com.example.soptassignment1.databinding.ActivitySigninBinding
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHomeBinding
+    private lateinit var homeViewPagerAdapter: HomeViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
 
-        initTransactionEvent()
+        initAdapter()
+        initBottomNavigation()
 
         setContentView(binding.root)
-        buttonGithub()
     }
 
-    private fun initTransactionEvent() {
-        val fragmentFollower = FollowerFragment()
-        val fragmentRepository = RepositoryFragment()
+    private fun initAdapter() {
+        val fragmentList = listOf(ProfileFragment(), HomeFragment())
 
-        supportFragmentManager.beginTransaction().add(R.id.fragment_container_view_tag, fragmentFollower).commit()
+        homeViewPagerAdapter = HomeViewPagerAdapter(this)
+        homeViewPagerAdapter.fragments.addAll(fragmentList)
 
-        buttonFollower(fragmentFollower)
-        buttonRepository(fragmentRepository)
+        binding.vpHome.adapter = homeViewPagerAdapter
     }
 
-    // 깃허브로 이동
-    private fun buttonGithub() {
-        binding.btnGithub.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/shb03323"))
-            startActivity(intent)
+    private fun initBottomNavigation() {
+        binding.vpHome.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                binding.bnv.menu.getItem(position).isChecked = true
+            }
+        })
+
+        binding.bnv.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.menu_profile -> {
+                    binding.vpHome.currentItem = FIRST_FRAGMENT
+                    return@setOnItemSelectedListener true
+                }
+                R.id.menu_home -> {
+                    binding.vpHome.currentItem = SECOND_FRAGMENT
+                    return@setOnItemSelectedListener true
+                }
+                else -> {
+                    binding.vpHome.currentItem = THIRD_FRAGMENT
+                    return@setOnItemSelectedListener true
+                }
+            }
         }
     }
 
-    // 팔로워 fragment
-    private fun buttonFollower(fragmentFollower : FollowerFragment) {
-        binding.btnFollower.setOnClickListener {
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container_view_tag, fragmentFollower)
-            transaction.commit()
-        }
-    }
-
-    // 레포지토리 fragment
-    private fun buttonRepository(fragmentRepository : RepositoryFragment) {
-        binding.btnRepository.setOnClickListener {
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container_view_tag, fragmentRepository)
-            transaction.commit()
-        }
+    companion object {
+        const val FIRST_FRAGMENT = 0
+        const val SECOND_FRAGMENT = 1
+        const val THIRD_FRAGMENT = 2
     }
 }

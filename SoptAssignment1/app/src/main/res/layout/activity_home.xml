@@ -5,185 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SOPTHub"
-        android:textColor="@color/main_color"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="@+id/tv_logo"
-        app:layout_constraintStart_toStartOf="@+id/tv_logo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_logo"
-        app:srcCompat="@drawable/jeonghoon" />
-
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/text_option_margin"
-        android:text="이름"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/tv_my_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="박정훈"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_name"
-        app:layout_constraintTop_toTopOf="@+id/tv_name" />
-
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/text_option_margin"
-        android:text="나이"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
-
-    <TextView
-        android:id="@+id/tv_my_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="26"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_age"
-        app:layout_constraintTop_toTopOf="@+id/tv_age" />
-
-    <TextView
-        android:id="@+id/tv_mbti"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/text_option_margin"
-        android:text="MBTI"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_age"
-        app:layout_constraintTop_toBottomOf="@+id/tv_age" />
-
-    <TextView
-        android:id="@+id/tv_my_mbti"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="ENFJ"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_mbti"
-        app:layout_constraintTop_toTopOf="@+id/tv_mbti" />
-
-    <TextView
-        android:id="@+id/tv_introduction"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/text_option_margin"
-        android:text="간단한 소개"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_mbti"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mbti" />
-
-    <TextView
-        android:id="@+id/tv_my_introduction"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="iPhone13 Pro Max"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_introduction"
-        app:layout_constraintStart_toEndOf="@+id/tv_introduction" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_github"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="@dimen/text_option_margin"
-        android:layout_marginEnd="100dp"
-        android:background="#F46F9C"
-        android:text="깃허브"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_my_introduction"
-        tools:ignore="TextContrastCheck" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_follower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="@dimen/text_option_margin"
-        android:layout_marginBottom="10dp"
-        android:background="@color/main_color"
-        android:text="팔로워"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_repository"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_github"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_repository"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="10dp"
-        android:background="#F46F9C"
-        android:text="레포지토리"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_follower"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_follower"
-        app:layout_constraintTop_toTopOf="@+id/btn_follower"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view_tag"
-        tools:layout="@layout/fragment_follower"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_home"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_menu_navigation"
+        app:itemIconTint="@color/selector_bottom_navi"
+        app:itemRippleColor="#FFB2EF"
+        app:itemTextColor="@color/selector_bottom_navi"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_follower" />
+        app:layout_constraintEnd_toEndOf="@id/vp_home"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

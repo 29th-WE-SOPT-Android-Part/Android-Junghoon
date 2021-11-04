@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_profile"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:background="@color/pinkpop"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-148dp">
+
+        <ImageView
+            android:id="@+id/iv_my_profile"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            app:srcCompat="@drawable/beer" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_margin"
+            android:fontFamily="@font/noto"
+            android:lineSpacingExtra="29dp"
+            android:text="Jeonghoon Park"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_github_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_margin"
+            android:fontFamily="@font/noto"
+            android:lineSpacingExtra="20dp"
+            android:text="shb03323"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="@dimen/login_text_size" />
+
+        <TextView
+            android:id="@+id/tv_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_margin"
+            android:fontFamily="@font/noto"
+            android:lineSpacingExtra="20dp"
+            android:text="| 맥주사랑 |"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="@dimen/login_text_size" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_settings" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_follower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_option_margin"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="@dimen/text_option_margin"
+        android:layout_marginBottom="@dimen/text_option_margin"
+        android:background="@drawable/fragment_selector_button"
+        android:text="팔로워 목록"
+        android:textColor="@drawable/fragment_selector_button_text_color"
+        android:fontFamily="@font/noto"
+        android:textFontWeight="400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_repository"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_profile"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_repository"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="@dimen/text_option_margin"
+        android:layout_marginBottom="@dimen/text_option_margin"
+        android:background="@drawable/fragment_selector_button"
+        android:text="레포지토리 목록"
+        android:textColor="@drawable/fragment_selector_button_text_color"
+        android:fontFamily="@font/noto"
+        android:textFontWeight="400"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_follower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_follower"
+        app:layout_constraintTop_toTopOf="@+id/btn_follower"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view_tag"
+        tools:layout="@layout/fragment_follower"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_follower" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
