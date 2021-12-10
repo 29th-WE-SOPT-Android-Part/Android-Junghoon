@@ -1,9 +1,12 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
+import com.example.soptassignment1.R
 import com.example.soptassignment1.databinding.ActivityHomeBinding
+import com.example.soptassignment1.ui.home.home.HomeFragment
+import com.example.soptassignment1.ui.home.profile.ProfileFragment
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHomeBinding

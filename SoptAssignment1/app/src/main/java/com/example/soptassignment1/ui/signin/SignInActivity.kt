@@ -1,13 +1,17 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.signin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.soptassignment1.data.RequestLoginData
+import com.example.soptassignment1.data.ResponseLoginData
+import com.example.soptassignment1.SOPTSharedPreferences
 import com.example.soptassignment1.databinding.ActivitySigninBinding
+import com.example.soptassignment1.ui.signup.SignUpActivity
+import com.example.soptassignment1.ui.home.HomeActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,6 +38,10 @@ class SignInActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             initNetwork()
         }
+
+        // 자동로그인
+        initClickEvent()
+        isAutoLogin()
 
         // 회원가입 뷰로 이동
         binding.tvSignup2.setOnClickListener {
@@ -69,5 +77,20 @@ class SignInActivity : AppCompatActivity() {
                 Log.e("NetworkText", "error:$t")
             }
         })
+    }
+
+    private fun initClickEvent() {
+        binding.ibCheck.setOnClickListener {
+            binding.ibCheck.isSelected = !binding.ibCheck.isSelected
+            SOPTSharedPreferences.setAutoLogin(this, binding.ibCheck.isSelected)
+        }
+    }
+
+    private fun isAutoLogin() {
+        if(SOPTSharedPreferences.getAutoLogin(this)) {
+            Toast.makeText(this@SignInActivity, "자동 로그인 되었습니다", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
+            finish()
+        }
     }
 }

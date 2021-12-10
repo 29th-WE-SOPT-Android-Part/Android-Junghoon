@@ -1,10 +1,12 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.signup
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.soptassignment1.ui.signin.LoginServiceCreator
+import com.example.soptassignment1.data.RequestSignupData
+import com.example.soptassignment1.data.ResponseSignupData
 import com.example.soptassignment1.databinding.ActivitySignUpBinding
 import retrofit2.Call
 import retrofit2.Callback

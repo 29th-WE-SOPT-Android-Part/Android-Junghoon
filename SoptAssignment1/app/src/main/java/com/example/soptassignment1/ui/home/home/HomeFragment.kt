@@ -1,13 +1,13 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.home.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.soptassignment1.databinding.FragmentComingSoonBinding
 import com.example.soptassignment1.databinding.FragmentHomeBinding
-import com.example.soptassignment1.databinding.FragmentProfileBinding
+import com.example.soptassignment1.ui.home.camera.ComingSoonFragment
+import com.example.soptassignment1.ui.home.TabViewPaperAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class HomeFragment : Fragment() {

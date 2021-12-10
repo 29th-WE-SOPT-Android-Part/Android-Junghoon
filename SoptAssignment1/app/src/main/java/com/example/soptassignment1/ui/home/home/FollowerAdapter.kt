@@ -1,9 +1,11 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.home.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.soptassignment1.R
+import com.example.soptassignment1.data.UserData
 import com.example.soptassignment1.databinding.FollowerListBinding
 
 class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>() {

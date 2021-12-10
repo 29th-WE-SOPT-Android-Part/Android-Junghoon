@@ -1,9 +1,9 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.home.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.soptassignment1.databinding.FollowerListBinding
+import com.example.soptassignment1.data.RepositoryData
 import com.example.soptassignment1.databinding.RepositoryListBinding
 
 class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHolder>() {

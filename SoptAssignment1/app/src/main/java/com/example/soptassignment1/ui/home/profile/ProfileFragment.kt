@@ -1,12 +1,17 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.home.profile
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.example.soptassignment1.R
 import com.example.soptassignment1.databinding.FragmentProfileBinding
+import com.example.soptassignment1.ui.home.SettingsActivity
+import com.example.soptassignment1.ui.home.home.FollowerFragment
+import com.example.soptassignment1.ui.home.home.RepositoryFragment
 
 class ProfileFragment : Fragment() {
     private lateinit var binding : FragmentProfileBinding
@@ -21,6 +26,7 @@ class ProfileFragment : Fragment() {
 
         initImage()
         initTransactionEvent()
+        buttonSettings()
 
         return binding.root
     }
@@ -63,6 +69,12 @@ class ProfileFragment : Fragment() {
             val transaction = childFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container_view_tag, fragmentRepository)
             transaction.commit()
+        }
+    }
+
+    private fun buttonSettings() {
+        binding.ibSettings.setOnClickListener {
+            startActivity(Intent(activity, SettingsActivity::class.java))
         }
     }
 }

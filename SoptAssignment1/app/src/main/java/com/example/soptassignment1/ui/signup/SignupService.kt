@@ -1,5 +1,7 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.signup
 
+import com.example.soptassignment1.data.RequestSignupData
+import com.example.soptassignment1.data.ResponseSignupData
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Headers

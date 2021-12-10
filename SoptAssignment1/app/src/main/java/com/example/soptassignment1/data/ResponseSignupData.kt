@@ -1,6 +1,6 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.data
 
-data class ResponseLoginData(
+data class ResponseSignupData(
     val status: Int,
     val success: Boolean,
     val message: String,
