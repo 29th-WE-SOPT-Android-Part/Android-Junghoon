@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SoptAssignment1"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.home.SettingsActivity"
+            android:name=".ui.home.home.SettingsActivity"
             android:exported="true" />
         <activity
             android:name=".ui.starting.StartingActivity"

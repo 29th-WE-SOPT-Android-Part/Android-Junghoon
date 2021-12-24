@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.example.soptassignment1.R
 import com.example.soptassignment1.databinding.FragmentProfileBinding
-import com.example.soptassignment1.ui.home.SettingsActivity
+import com.example.soptassignment1.ui.home.home.SettingsActivity
 import com.example.soptassignment1.ui.home.home.FollowerFragment
 import com.example.soptassignment1.ui.home.home.RepositoryFragment
 
@@ -26,7 +26,7 @@ class ProfileFragment : Fragment() {
 
         initImage()
         initTransactionEvent()
-        buttonSettings()
+        initButtonSettings()
 
         return binding.root
     }
@@ -72,7 +72,7 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun buttonSettings() {
+    private fun initButtonSettings() {
         binding.ibSettings.setOnClickListener {
             startActivity(Intent(activity, SettingsActivity::class.java))
         }

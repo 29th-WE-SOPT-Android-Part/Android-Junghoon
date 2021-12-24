@@ -8,6 +8,7 @@ import com.example.soptassignment1.ui.signin.LoginServiceCreator
 import com.example.soptassignment1.data.RequestSignupData
 import com.example.soptassignment1.data.ResponseSignupData
 import com.example.soptassignment1.databinding.ActivitySignUpBinding
+import com.example.soptassignment1.util.Utils.shortToast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -44,11 +45,10 @@ class SignUpActivity : AppCompatActivity() {
             ) {
                 if(response.isSuccessful) {
                     val data = response.body()?.data
-
-                    Toast.makeText(this@SignUpActivity, "${data?.email}님 회원가입이 완료되었습니다!", Toast.LENGTH_SHORT).show()
+                    shortToast("${data?.email}님 회원가입이 완료되었습니다!")
                 }
                 else
-                    Toast.makeText(this@SignUpActivity, "회원가입에 실패하셨습니다", Toast.LENGTH_SHORT).show()
+                    shortToast("회원가입에 실패하셨습니다")
             }
 
             override fun onFailure(call: Call<ResponseSignupData>, t: Throwable) {

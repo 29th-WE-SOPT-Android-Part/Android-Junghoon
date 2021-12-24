@@ -1,4 +1,4 @@
-package com.example.soptassignment1.ui.home
+package com.example.soptassignment1.ui.home.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

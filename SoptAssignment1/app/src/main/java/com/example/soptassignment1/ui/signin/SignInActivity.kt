@@ -41,7 +41,7 @@ class SignInActivity : AppCompatActivity() {
 
         // 자동로그인
         initClickEvent()
-        isAutoLogin()
+        doAutoLogin()
 
         // 회원가입 뷰로 이동
         binding.tvSignup2.setOnClickListener {
@@ -86,7 +86,7 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
-    private fun isAutoLogin() {
+    private fun doAutoLogin() {
         if(SOPTSharedPreferences.getAutoLogin(this)) {
             Toast.makeText(this@SignInActivity, "자동 로그인 되었습니다", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
