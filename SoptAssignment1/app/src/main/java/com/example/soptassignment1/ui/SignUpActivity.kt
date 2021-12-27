@@ -1,4 +1,4 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
