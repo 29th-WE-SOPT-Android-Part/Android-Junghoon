@@ -19,6 +19,8 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun initData(name: String, introduction: String, image: Int) {
-        
+        binding.tvMyName.text = name
+        binding.tvIntroduction.text = introduction
+        binding.imageView.setImageResource(image)
     }
 }
