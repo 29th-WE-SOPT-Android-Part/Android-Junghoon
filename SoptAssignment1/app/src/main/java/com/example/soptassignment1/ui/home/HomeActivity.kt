@@ -1,11 +1,13 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.home
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.soptassignment1.ui.home.follower.FollowerFragment
+import com.example.soptassignment1.R
+import com.example.soptassignment1.ui.home.repository.RepositoryFragment
 import com.example.soptassignment1.databinding.ActivityHomeBinding
-import com.example.soptassignment1.databinding.ActivitySigninBinding
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHomeBinding

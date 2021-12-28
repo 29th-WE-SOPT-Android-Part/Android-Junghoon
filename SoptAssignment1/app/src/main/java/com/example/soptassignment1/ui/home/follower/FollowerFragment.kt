@@ -1,11 +1,13 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui.home.follower
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.soptassignment1.data.UserData
 import com.example.soptassignment1.databinding.FragmentFollowerBinding
+import com.example.soptassignment1.ui.home.follower.FollowerAdapter
 
 class FollowerFragment : Fragment() {
     private lateinit var followerAdapter: FollowerAdapter

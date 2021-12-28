@@ -1,4 +1,4 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.data
 
 data class RepositoryData(
     val name: String,

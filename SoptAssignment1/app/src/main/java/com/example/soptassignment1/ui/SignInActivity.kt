@@ -1,12 +1,12 @@
-package com.example.soptassignment1
+package com.example.soptassignment1.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.soptassignment1.databinding.ActivitySigninBinding
+import com.example.soptassignment1.ui.home.HomeActivity
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySigninBinding
