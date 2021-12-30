@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.NotificationCompat.getColor
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.soptassignment1.R
 import com.example.soptassignment1.data.UserData
@@ -26,7 +27,7 @@ class FollowerFragment : Fragment() {
     ): View? {
         _binding = FragmentFollowerBinding.inflate(layoutInflater, container, false)
 
-        binding.rvFollower.addItemDecoration(FollowerItemDecoration(1, requireContext().getColor(R.color.black)))
+        binding.rvFollower.addItemDecoration(FollowerItemDecoration(5, 5f, ContextCompat.getColor(requireContext(), R.color.gray)))
 
         initAdapter()
         return binding.root
